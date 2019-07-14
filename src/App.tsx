@@ -3,17 +3,20 @@ import { Link, Router, RouteComponentProps } from '@reach/router'
 import { ComponentClassExample, HooksExample } from './examples'
 import './App.css'
 
+const BASE_PATH = 'hooked-on-context'
+const withBasePath = (path: string) => `/${BASE_PATH}/${path}`
+
 const App: React.FC = () => {
   return (
     <>
       <header>
         <nav>
-          <Link to="./component-class">Component Class Example</Link>
-          <Link to="./hooks">Hooks Example</Link>
+          <Link to={withBasePath('component-class')}>Component Class Example</Link>
+          <Link to={withBasePath('hooks')}>Hooks Example</Link>
         </nav>
       </header>
       <main>
-        <Router>
+        <Router basepath={BASE_PATH}>
           <Home default />
           <ComponentClassExample path="component-class" />
           <HooksExample path="hooks" />
