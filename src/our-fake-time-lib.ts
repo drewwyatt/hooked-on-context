@@ -31,7 +31,6 @@ export interface TwentyFourHourTimeEvent extends BaseTimeEvent {
 const INTERVAL_KEY = 'DREWS_INTERVAL_KEY'
 const setThatOneInterval = (n: number) => {
   if ((window as any)[INTERVAL_KEY]) {
-    console.log('clearing...')
     clearInterval((window as any)[INTERVAL_KEY])
   }
 
