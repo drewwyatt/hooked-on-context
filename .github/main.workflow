@@ -1,6 +1,10 @@
 workflow "On Update" {
   on = "push"
-  resolves = ["Test", "Lint"]
+  resolves = [
+    "Lint",
+    "Test",
+    "Build",
+  ]
 }
 
 action "Install" {
@@ -18,4 +22,10 @@ action "Lint" {
   uses = "nuxt/actions-yarn@master"
   needs = ["Install"]
   args = "lint"
+}
+
+action "Build" {
+  uses = "nuxt/actions-yarn@master"
+  needs = ["Install"]
+  args = "build"
 }
