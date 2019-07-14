@@ -15,7 +15,10 @@ action "Install" {
 action "Test" {
   uses = "nuxt/actions-yarn@master"
   needs = ["Install"]
-  args = "test a"
+  env = {
+    CI = "true"
+  }
+  args = "test"
 }
 
 action "Lint" {
