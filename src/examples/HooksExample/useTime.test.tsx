@@ -2,7 +2,7 @@ import React from 'react'
 import { renderHook, act } from '@testing-library/react-hooks'
 import { TimeContext } from './context'
 import { DEFAULT_STATE } from './state'
-import useTime from './useTime'
+import useTime, { HourType } from './useTime'
 
 let MOCKED_HOURS = 7
 let MOCKED_MINUTES = 0
@@ -59,5 +59,13 @@ describe('useTime', () => {
       jest.advanceTimersByTime(3000)
     })
     expect(dispatch).toHaveBeenCalledTimes(4)
+  })
+
+  it('returns a callback to update hourType', () => {
+    const [, updateHourType] = render(() => useTime()).result.current
+    act(() => {
+      updateHourType(HourType.twelve)
+    })
+    expect(dispatch).toHaveBeenCalledTimes(2)
   })
 })
