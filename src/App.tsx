@@ -8,8 +8,8 @@ const App: React.FC = () => {
     <>
       <header>
         <nav>
-          <Link to="component-class">Component Class Example</Link>
-          <Link to="hooks">Hooks Example</Link>
+          <Link to="./component-class">Component Class Example</Link>
+          <Link to="./hooks">Hooks Example</Link>
         </nav>
       </header>
       <main>
