@@ -1,4 +1,4 @@
-workflow "On Update" {
+workflow "Build/Test/Deploy" {
   on = "push"
   resolves = [
     "Test",
@@ -39,7 +39,7 @@ action "Filter Master Branch" {
   args = "branch master"
 }
 
-action "maxheld83/ghpages@master" {
+action "Deploy" {
   uses = "maxheld83/ghpages@master"
   needs = ["Filter Master Branch"]
   env = {
