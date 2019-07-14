@@ -5,17 +5,21 @@ import './App.css'
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <nav>
-        <Link to="component-class">Component Class Example</Link>
-        <Link to="hooks">Hooks Example</Link>
-      </nav>
-      <Router>
-        <Home default />
-        <ComponentClassExample path="component-class" />
-        <HooksExample path="hooks" />
-      </Router>
-    </div>
+    <>
+      <header>
+        <nav>
+          <Link to="component-class">Component Class Example</Link>
+          <Link to="hooks">Hooks Example</Link>
+        </nav>
+      </header>
+      <main>
+        <Router>
+          <Home default />
+          <ComponentClassExample path="component-class" />
+          <HooksExample path="hooks" />
+        </Router>
+      </main>
+    </>
   )
 }
 
