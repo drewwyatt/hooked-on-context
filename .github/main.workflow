@@ -3,7 +3,7 @@ workflow "Build Test Deploy" {
   resolves = [
     "Test",
     "Build",
-    "maxheld83/ghpages@master",
+    "Deploy",
   ]
 }
 
