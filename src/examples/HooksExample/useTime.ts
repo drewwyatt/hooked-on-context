@@ -5,7 +5,7 @@ import { setHours, setMinutes, setSeconds, setHourType, init, State } from './st
 
 export { AmPm, HourType }
 
-export const useTime = (
+const useTime = (
   context: typeof TimeContext = TimeContext,
 ): [State, (h: HourType) => void] => {
   const { state, dispatch } = useContext(context)
@@ -25,6 +25,7 @@ export const useTime = (
     time.current.on('minutes', m => dispatch(setMinutes(m)))
     time.current.on('seconds', s => dispatch(setSeconds(s)))
     time.current.on('hourType', (ht, e) => dispatch(setHourType(ht, e)))
+    // eslint-disable-next-line
   }, [])
 
   const setHourTypeOnTime = useCallback(
@@ -36,3 +37,5 @@ export const useTime = (
 
   return [state, setHourTypeOnTime]
 }
+
+export default useTime
