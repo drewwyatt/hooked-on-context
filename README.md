@@ -23,7 +23,7 @@ Since most of the code samples in the keynote were copy/pasted from VSCode, they
 
 ## 🔧 Downloading and Running
 
-The examples are build with [create-react-app](https://github.com/facebook/create-react-app). You can get off the ground using the default create-react-app commands. Namely:
+The examples are built with [create-react-app](https://github.com/facebook/create-react-app). You can get off the ground using the default create-react-app commands. Namely:
 
 first:
 
