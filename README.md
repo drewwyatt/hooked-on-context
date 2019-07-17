@@ -19,7 +19,7 @@ Since most of the code samples in the keynote were copy/pasted from VSCode, they
 **🔗 Links**
 
 - [Download presentation](https://github.com/drewwyatt/hooked-on-context/blob/master/hooked-on-context.key)
-- [View in browser](https://www.icloud.com/keynote/0i9QLfaGsAKXDWcZGM9_hhzsA#hooked-on-context)
+- [View in browser](https://www.icloud.com/keynote/0mfYXq1DbAFws3iuPtiZADiZg#hooked-on-context)
 
 ## 🔧 Downloading and Running
 
